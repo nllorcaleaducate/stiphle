@@ -1,5 +1,5 @@
 {
-    "name": "leaducate/stiphle",
+    "name": "leaducate/stiphle-leaducate",
     "type": "library",
     "description": "Simple rate limiting/throttling for php",
     "keywords": ["leaducate"],
