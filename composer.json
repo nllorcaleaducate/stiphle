@@ -1,14 +1,14 @@
 {
-    "name": "davedevelopment/stiphle",
+    "name": "leaducate/stiphle",
     "type": "library",
     "description": "Simple rate limiting/throttling for php",
-    "keywords": ["throttle", "throttling", "rate limiting", "rate limit"],
-    "homepage": "http://github.com/davedevelopment/stiphle",
+    "keywords": ["leaducate"],
+    "homepage": "https://github.com/nllorcaleaducate/stiphle",
     "license": "MIT",
     "authors": [{
-        "name": "Dave Marshall",
-        "email": "dave.marshall@atstsolutions.co.uk",
-        "homepage": "http://davedevelopment.co.uk"
+        "name": "Nicolas Llorca",
+        "email": "nicolas.llorca@leaducate.com",
+        "homepage": "http://www.leaducate.com"
     }],
 
     "require": {
