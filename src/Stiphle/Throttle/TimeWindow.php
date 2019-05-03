@@ -43,14 +43,14 @@ class TimeWindow implements ThrottleInterface
      * @param int $milliseconds - In this many milliseconds
      * @return void
      */
-    public function throttle($key, $limit, $milliseconds)
+    public function throttle($key, $limit, $milliseconds, $doSleep = true)
     {
         /**
          * Try do our waiting without a lock, so may sneak through because of
          * this...
          */
         $wait = $this->getEstimate($key, $limit, $milliseconds);
-        if ($wait > 0) {
+        if ($wait > 0 && $doSleep) {
             usleep($wait * 1000);
         }
 

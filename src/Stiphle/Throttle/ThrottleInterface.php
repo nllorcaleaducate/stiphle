@@ -31,7 +31,7 @@ interface ThrottleInterface
      * @param int $milliseconds - In this many milliseconds
      * @return void
      */
-    public function throttle($key, $limit, $milliseconds);
+    public function throttle($key, $limit, $milliseconds, $doSleep = true);
 
     /**
      * Get Estimate
