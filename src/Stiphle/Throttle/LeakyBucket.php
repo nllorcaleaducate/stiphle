@@ -47,7 +47,7 @@ class LeakyBucket implements ThrottleInterface
      * @param int $milliseconds - In this many milliseconds
      * @return int
      */
-    public function throttle($key, $limit, $milliseconds)
+    public function throttle($key, $limit, $milliseconds, $doSleep = true)
     {
         /**
          * Try and do our waiting without a lock
@@ -59,7 +59,11 @@ class LeakyBucket implements ThrottleInterface
         if ($newRatio > $milliseconds) {
             $wait = ceil($newRatio - $milliseconds);
         }
-        usleep($wait * 1000);
+
+        if($doSleep) {
+            usleep($wait * 1000);    
+        }
+        
 
         /**
          * Lock, record and release 
